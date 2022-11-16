@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vh;
+}
+
+.cart {
+    padding: 11px 14px;
+    height: max-content;
+}
+
+.signUp {
+    background-color: black;
+    color: white;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 15px 0px 15px;
+}
+
+.menu_icon {
+    display: none;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    padding: 9px;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 5px 5px 16px rgba(128, 128, 128, 0.382);
+    z-index: 1;
+    position: relative;
+}
+
+nav button {
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    line-height: 1.4;
+    font-size: 0.87rem;
+    cursor: pointer;
+    margin: 3px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+nav form {
+    display: flex;
+    width: 100%;
+    margin-right: 90px;
+    position: relative;
+    right: 10px;
+    margin: auto;
+}
+
+nav form input {
+    border: 0.1em solid black;
+    padding: 0px 2.4rem 0px 2.4rem;
+    display: flex;
+    align-items: stretch;
+    border-radius: 30px;
+    width: 100%;
+    height: 47px;
+    margin-right: 2px;
+    background-color: rgba(0, 0, 0, 0.029);
+}
+
+nav form input:focus {
+    outline: none;
+}
+
+nav form button {
+    border: none;
+    position: relative;
+    background: rgba(76, 175, 80, 0);
+    left: 35px;
+}
+
+.menu_icon {
+    display: none;
+}
+
+.logo {
+    border: none;
+    height: 2.1rem;
+    background-color: white;
+    position: relative;
+    top: 4px;
+}
+
+.logIn {
+    border: 1px solid black;
+    font-weight: 900;
+    height: 40px;
+    width: max-content;
+    padding: 0px 20px 0px 20px;
+}

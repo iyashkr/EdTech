@@ -1,0 +1,33 @@
+.shopping {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.shopping_cart {
+    height: 50vh;
+    width: 100%;
+    border: 1px solid gray;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.keep_shopping {
+    background: linear-gradient(270deg, #F24F60 10.36%, #A5066C 95.36%);
+    height: 50px;
+    width: 10rem;
+    appearance: none;
+    outline: none;
+    border: 0px;
+    color: white;
+}
