@@ -1,11 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-size: 100%;
     font-family: 'Lato', sans-serif;
+}
+
+#navbarTogglerDemo02 {
+    background-color: white;
+}
+
+.navbar-nav .nav-link>.fa {
+    position: relative;
+    left: 0%;
+    width: 36px;
+    font-size: 24px;
+}
+
+.navbar-nav .nav-link>.fa {
+    top: 3px;
+    line-height: 12px;
 }
 
 header {
@@ -108,4 +125,25 @@ nav form button {
     height: 40px;
     width: max-content;
     padding: 0px 20px 0px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+
+
+    .card {
+        width: 200px;
+    }
+
+    #python {
+        flex-direction: column;
+    }
+
+    .col-3 {
+        flex: 0 0 auto;
+        width: 90%;
+    }
+
+    .ex {
+        width: 90%;
+    }
 }

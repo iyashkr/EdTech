@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="./css/styles.css">
     <style>
         .checked {
@@ -23,49 +24,75 @@
     </style>
 </head>
 
-<body class="container-fluid">
+<body class="">
 
-    <nav>
-        <button class="menu_icon">
-            <i class="fa fa-bars"></i>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a href="index.html">
-        <button>
-            <img class="logo"
-                src="https://cdna.artstation.com/p/assets/images/images/016/849/046/large/kyle-miller-edtech-logo.jpg?1553705669"
-                alt="EdTech logo" />
-        </button> </a>
-
-        <button style="display: flex; padding-top: 10px; margin-right: 20px; " type="button">Categories</button>
-
-        <!-- Search  -->
-        <form action="nothing">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="Search for anything" />
-        </form>
-        <!-- ----- -->
-
-        <a href="/learning.html" class="">
-            <button class="book" type="button">
-                <i class="fa fa-book" style="transform: scale(150%);"></i>
+            <button>
+                <img class="logo"
+                    src="https://cdna.artstation.com/p/assets/images/images/016/849/046/large/kyle-miller-edtech-logo.jpg?1553705669"
+                    alt="EdTech logo" />
             </button>
         </a>
-        <a href="/cart.html" class="">
-            <button class="cart" type="button">
-                <i class="fa fa-cart-plus" style="transform: scale(150%);"></i>
-            </button>
-        </a>
-        <a href="./login.html"><button class="logIn" type="button">Log-In</button></a>
-        <a href="./signup.html"><button class="signUp" type="button">Sign-Up</button></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse  " id="navbarTogglerDemo02">
+            <ul class="navbar-nav ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#categories">Categories <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#courses">Courses <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <form action="nothing">
+                <button type="submit"><i class="fa fa-search"></i></button>
+                <input id="in" type="text" placeholder="Search for anything" />
+            </form>
+
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/learning.html" class="nav-link">
+                        <button class="book" type="button">
+                            <i class="fa fa-book" style="transform: scale(150%);"></i>
+                        </button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/cart.html" class="">
+                        <button class="cart" type="button">
+                            <i class="fa fa-cart-plus" style="transform: scale(150%);"></i>
+                        </button>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login.html"><button class="logIn" type="button">Log-In</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="./signup.html"><button class="signUp" type="button">Sign-Up</button></a>
+                </li>
+
+            </ul>
+
+
+        </div>
     </nav>
+
 
     <!-- header -->
     <header style="display: grid; align-content: center;">
         <div class="row">
             <div class="col-4 offset-1 ">
-                <div class="card px-4 py-4 shadow" style="background: linear-gradient(270deg, #F24F60 10.36%, #A5066C 95.36%);">
-                    <h1 style="font-weight: 700;letter-spacing: 2px; color: rgb(254, 251, 251);">New to EdTech? Lucky you.</h1>
-                    <h5 style="color: rgb(238, 251, 212);">Courses start at ₹449. Get your new-student offer before it expires.</h5>
+                <div class="card px-4 py-4 shadow"
+                    style="background: linear-gradient(270deg, #F24F60 10.36%, #A5066C 95.36%);">
+                    <h1 style="font-weight: 700;letter-spacing: 2px; color: rgb(254, 251, 251);">New to EdTech? Lucky
+                        you.</h1>
+                    <h5 style="color: rgb(238, 251, 212);">Courses start at ₹449. Get your new-student offer before it
+                        expires.</h5>
                 </div>
             </div>
             <div class="col-6">
@@ -117,28 +144,175 @@
                             aria-selected="false" style="border: 0 !important; color:#c10d7f">Drawing</button>
                     </li>
                 </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                        tabindex="0">
-                        <div class="card py-4 px-4">
-                            <h3 style="font-weight: 600;">Expand your career opportunities with Python</h3>
-                            <p>Take one of EdTech’s range of Python courses and learn how to code using this incredibly
-                                useful language. Its simple syntax and readability makes Python perfect for Flask,
-                                Django, data science, and machine learning. You’ll learn how to build everything from
-                                games to sites to apps. Choose from a range of courses that will appeal to...</p>
-                            <div class="mb-4">
-                                <button class="btn btn-outline-dark pb-2 rounded-0" style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore Python</button>
+                <section class="pythoncourse" id="courses">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                            aria-labelledby="home-tab" tabindex="0">
+                            <div class="card  ex py-4 px-4">
+                                <h3 style="font-weight: 600;">Expand your career opportunities with Python</h3>
+                                <p>Take one of EdTech’s range of Python courses and learn how to code using this
+                                    incredibly
+                                    useful language. Its simple syntax and readability makes Python perfect for Flask,
+                                    Django, data science, and machine learning. You’ll learn how to build everything
+                                    from
+                                    games to sites to apps. Choose from a range of courses that will appeal to...</p>
+                                <div class="mb-4">
+                                    <button class="btn btn-outline-dark pb-2 rounded-0"
+                                        style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore
+                                        Python</button>
+                                </div>
+
+                                <div class="row" id="python">
+                                    <div class="col-3">
+                                        <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                            <div class="">
+                                                <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                                    alt="" class="img-fluid">
+                                                <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
+                                                    Python
+                                                    Programming Course</h5>
+                                                <p><small>
+                                                        <span style="font-weight: bold;">Instructor</span>:
+                                                        Yash Kumar, EdTech
+                                                    </small><br>
+                                                    <small>
+                                                        <span
+                                                            style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                        <span style="color: gray;">(3807)</span>
+                                                    </small>
+                                                </p>
+                                                <p style="font-weight: bold;"><span
+                                                        style="margin-right: 10px;">₹449</span>
+                                                    <span
+                                                        style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                            <div class="">
+                                                <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                                    alt="" class="img-fluid">
+                                                <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
+                                                    Python
+                                                    Programming Course</h5>
+                                                <p><small>
+                                                        <span style="font-weight: bold;">Instructor</span>:
+                                                        Yash Kumar, EdTech
+                                                    </small><br>
+                                                    <small>
+                                                        <span
+                                                            style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                        <span style="color: gray;">(3807)</span>
+                                                    </small>
+                                                </p>
+                                                <p style="font-weight: bold;"><span
+                                                        style="margin-right: 10px;">₹449</span>
+                                                    <span
+                                                        style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                            <div class="">
+                                                <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                                    alt="" class="img-fluid">
+                                                <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
+                                                    Python
+                                                    Programming Course</h5>
+                                                <p><small>
+                                                        <span style="font-weight: bold;">Instructor</span>:
+                                                        Yash Kumar, EdTech
+                                                    </small><br>
+                                                    <small>
+                                                        <span
+                                                            style="color: orange;font-weight: bold;margin-right: 10px;">3.1</span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                        <span style="color: gray;">(3807)</span>
+                                                    </small>
+                                                </p>
+                                                <p style="font-weight: bold;"><span
+                                                        style="margin-right: 10px;">₹449</span>
+                                                    <span
+                                                        style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3">
+                                        <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                            <div class="">
+                                                <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                                    alt="" class="img-fluid">
+                                                <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
+                                                    Python
+                                                    Programming Course</h5>
+                                                <p><small>
+                                                        <span style="font-weight: bold;">Instructor</span>:
+                                                        Yash Kumar, EdTech
+                                                    </small><br>
+                                                    <small>
+                                                        <span
+                                                            style="color: orange;font-weight: bold;margin-right: 10px;">3.1</span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                        <span style="color: gray;">(3807)</span>
+                                                    </small>
+                                                </p>
+                                                <p style="font-weight: bold;"><span
+                                                        style="margin-right: 10px;">₹449</span>
+                                                    <span
+                                                        style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                            tabindex="0">
+                            <div class="card py-4 px-4">
+                                <h3 style="font-weight: 600;">Analyze and visualize data with Excel</h3>
+                                <p>Take a Microsoft Excel course from EdTech, and learn how to use this
+                                    industry-standard
+                                    software. Real-world experts will show you the basics like how to organize data into
+                                    sheets, rows and columns, and advanced techniques like creating complex dynamic
+                                    formulas. Both small businesses and large companies use Excel to...</p>
+                                <div class="mb-4">
+                                    <button class="btn btn-outline-dark pb-2 rounded-0"
+                                        style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore
+                                        Excel</button>
+                                </div>
 
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                <div class="row">
+                                    <div class="col-3">
                                         <div class="">
-                                            <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                            <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
                                                 alt="" class="img-fluid">
-                                            <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
-                                                Python
-                                                Programming Course</h5>
+                                            <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
+                                                Beginners/ Intermediate </h5>
                                             <p><small>
                                                     <span style="font-weight: bold;">Instructor</span>:
                                                     Yash Kumar, EdTech
@@ -146,67 +320,6 @@
                                                 <small>
                                                     <span
                                                         style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                    <span style="color: gray;">(3807)</span>
-                                                </small>
-                                            </p>
-                                            <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                                <span
-                                                    style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-3">
-                                    <a href="/course.html" class="" style="text-decoration: none; color:black">
-                                        <div class="">
-                                            <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
-                                                alt="" class="img-fluid">
-                                            <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
-                                                Python
-                                                Programming Course</h5>
-                                            <p><small>
-                                                    <span style="font-weight: bold;">Instructor</span>:
-                                                    Yash Kumar, EdTech
-                                                </small><br>
-                                                <small>
-                                                    <span
-                                                        style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star checked"></span>
-                                                    <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                    <span style="color: gray;">(3807)</span>
-                                                </small>
-                                            </p>
-                                            <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                                <span
-                                                    style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                            </p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a href="/course.html" class="" style="text-decoration: none; color:black">
-                                        <div class="">
-                                            <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
-                                                alt="" class="img-fluid">
-                                            <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
-                                                Python
-                                                Programming Course</h5>
-                                            <p><small>
-                                                    <span style="font-weight: bold;">Instructor</span>:
-                                                    Yash Kumar, EdTech
-                                                </small><br>
-                                                <small>
-                                                    <span
-                                                        style="color: orange;font-weight: bold;margin-right: 10px;">3.1</span>
                                                     <span class="fa fa-star checked"></span>
                                                     <span class="fa fa-star checked"></span>
                                                     <span class="fa fa-star checked"></span>
@@ -220,23 +333,20 @@
                                                     style="color:lightgray;text-decoration: line-through;">₹3,399</span>
                                             </p>
                                         </div>
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a href="/course.html" class="" style="text-decoration: none; color:black">
+                                    </div>
+                                    <div class="col-3">
                                         <div class="">
-                                            <img src="https://i.pinimg.com/736x/26/56/7e/26567ea3d31725c30d3c6a5e20f663bc.jpg"
+                                            <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
                                                 alt="" class="img-fluid">
-                                            <h5 class="mt-4" style="font-weight: bold;">Learn Python: The Complete
-                                                Python
-                                                Programming Course</h5>
+                                            <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
+                                                Beginners/ Intermediate </h5>
                                             <p><small>
                                                     <span style="font-weight: bold;">Instructor</span>:
                                                     Yash Kumar, EdTech
                                                 </small><br>
                                                 <small>
                                                     <span
-                                                        style="color: orange;font-weight: bold;margin-right: 10px;">3.1</span>
+                                                        style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
                                                     <span class="fa fa-star checked"></span>
                                                     <span class="fa fa-star checked"></span>
                                                     <span class="fa fa-star checked"></span>
@@ -250,142 +360,78 @@
                                                     style="color:lightgray;text-decoration: line-through;">₹3,399</span>
                                             </p>
                                         </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
-                        tabindex="0">
-                        <div class="card py-4 px-4">
-                            <h3 style="font-weight: 600;">Analyze and visualize data with Excel</h3>
-                            <p>Take a Microsoft Excel course from EdTech, and learn how to use this industry-standard
-                                software. Real-world experts will show you the basics like how to organize data into
-                                sheets, rows and columns, and advanced techniques like creating complex dynamic
-                                formulas. Both small businesses and large companies use Excel to...</p>
-                            <div class="mb-4">
-                                <button class="btn btn-outline-dark pb-2 rounded-0" style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore Excel</button>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="">
-                                        <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
-                                            alt="" class="img-fluid">
-                                        <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
-                                            Beginners/ Intermediate </h5>
-                                        <p><small>
-                                                <span style="font-weight: bold;">Instructor</span>:
-                                                Yash Kumar, EdTech
-                                            </small><br>
-                                            <small>
-                                                <span
-                                                    style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                <span style="color: gray;">(3807)</span>
-                                            </small>
-                                        </p>
-                                        <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                            <span style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                        </p>
                                     </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="">
-                                        <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
-                                            alt="" class="img-fluid">
-                                        <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
-                                            Beginners/ Intermediate </h5>
-                                        <p><small>
-                                                <span style="font-weight: bold;">Instructor</span>:
-                                                Yash Kumar, EdTech
-                                            </small><br>
-                                            <small>
+                                    <div class="col-3">
+                                        <div class="">
+                                            <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
+                                                alt="" class="img-fluid">
+                                            <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
+                                                Beginners/ Intermediate </h5>
+                                            <p><small>
+                                                    <span style="font-weight: bold;">Instructor</span>:
+                                                    Yash Kumar, EdTech
+                                                </small><br>
+                                                <small>
+                                                    <span
+                                                        style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                    <span style="color: gray;">(3807)</span>
+                                                </small>
+                                            </p>
+                                            <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
                                                 <span
-                                                    style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                <span style="color: gray;">(3807)</span>
-                                            </small>
-                                        </p>
-                                        <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                            <span style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                        </p>
+                                                    style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="">
-                                        <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
-                                            alt="" class="img-fluid">
-                                        <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
-                                            Beginners/ Intermediate </h5>
-                                        <p><small>
-                                                <span style="font-weight: bold;">Instructor</span>:
-                                                Yash Kumar, EdTech
-                                            </small><br>
-                                            <small>
+                                    <div class="col-3">
+                                        <div class="">
+                                            <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
+                                                alt="" class="img-fluid">
+                                            <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
+                                                Beginners/ Intermediate </h5>
+                                            <p><small>
+                                                    <span style="font-weight: bold;">Instructor</span>:
+                                                    Yash Kumar, EdTech
+                                                </small><br>
+                                                <small>
+                                                    <span
+                                                        style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star" style="margin-right: 10px;"></span>
+                                                    <span style="color: gray;">(3807)</span>
+                                                </small>
+                                            </p>
+                                            <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
                                                 <span
-                                                    style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                <span style="color: gray;">(3807)</span>
-                                            </small>
-                                        </p>
-                                        <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                            <span style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="">
-                                        <img src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/Blog-Images/Excel-Courses-Online/Beg-to-adv.jpg"
-                                            alt="" class="img-fluid">
-                                        <h5 class="mt-4" style="font-weight: bold;">Microsoft Excel 2013 Course
-                                            Beginners/ Intermediate </h5>
-                                        <p><small>
-                                                <span style="font-weight: bold;">Instructor</span>:
-                                                Yash Kumar, EdTech
-                                            </small><br>
-                                            <small>
-                                                <span
-                                                    style="color: orange;font-weight: bold;margin-right: 10px;">4.3</span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star checked"></span>
-                                                <span class="fa fa-star"></span>
-                                                <span class="fa fa-star" style="margin-right: 10px;"></span>
-                                                <span style="color: gray;">(3807)</span>
-                                            </small>
-                                        </p>
-                                        <p style="font-weight: bold;"><span style="margin-right: 10px;">₹449</span>
-                                            <span style="color:lightgray;text-decoration: line-through;">₹3,399</span>
-                                        </p>
+                                                    style="color:lightgray;text-decoration: line-through;">₹3,399</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
+                            tabindex="0">...</div>
+                        <div class="tab-pane fade" id="javascript-tab-pane" role="tabpanel"
+                            aria-labelledby="javascript-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="ds-tab-pane" role="tabpanel" aria-labelledby="ds-tab"
+                            tabindex="0">
+                            ...</div>
+                        <div class="tab-pane fade" id="aws-tab-pane" role="tabpanel" aria-labelledby="aws-tab"
+                            tabindex="0">
+                            ...</div>
+                        <div class="tab-pane fade" id="drawing-tab-pane" role="tabpanel" aria-labelledby="drawing-tab"
+                            tabindex="0">...</div>
                     </div>
-                    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
-                        tabindex="0">...</div>
-                    <div class="tab-pane fade" id="javascript-tab-pane" role="tabpanel" aria-labelledby="javascript-tab"
-                        tabindex="0">...</div>
-                    <div class="tab-pane fade" id="ds-tab-pane" role="tabpanel" aria-labelledby="ds-tab" tabindex="0">
-                        ...</div>
-                    <div class="tab-pane fade" id="aws-tab-pane" role="tabpanel" aria-labelledby="aws-tab" tabindex="0">
-                        ...</div>
-                    <div class="tab-pane fade" id="drawing-tab-pane" role="tabpanel" aria-labelledby="drawing-tab"
-                        tabindex="0">...</div>
-                </div>
+                </section>
             </div>
         </section>
 
@@ -536,7 +582,7 @@
             </div>
         </section>
 
-        <section class="my-5 py-5 mx-0 px-0" style="background-color: #F7F9FA;">
+        <section class="my-5 py-5 mx-0 px-0" style="background-color: #F7F9FA;" id="categories">
             <div class="mx-5">
                 <h3 style="font-weight: 600;" class="mb-5">Featured topics by category</h3>
                 <div class="row">
@@ -603,7 +649,9 @@
                     </div>
                 </div>
                 <div class="mb-4 mt-3">
-                    <button class="btn btn-outline-dark pb-2 rounded-0" style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore more topics</button>
+                    <button class="btn btn-outline-dark pb-2 rounded-0"
+                        style="background: linear-gradient(270deg, #fa606f 10.36%, #cc1087 94.36%); color: #F7F9FA;">Explore
+                        more topics</button>
                 </div>
             </div>
         </section>
