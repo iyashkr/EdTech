@@ -71,12 +71,13 @@
     </div>
     <script>
         function verify() {
-            var pw1 = document.getElementById("password1");
-            var pw2 = document.getElementById("password2");
-            if (pw1 != pw2) {
+            var pw1 = document.getElementsByName("password1");
+            var pw2 = document.getElementsByName("password2");
+            if (pw1 !== pw2) {
                 alert("Passwords did not match");
-            } else if(pw1 === pw2){
-                alert("Password created successfully");
+            }
+            if (pw1 === pw2) {
+                alert("Password matched");
             }
         } 
     </script>
