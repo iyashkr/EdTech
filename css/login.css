@@ -39,7 +39,7 @@ input {
     z-index: 5;
 }
 
-form {
+.form {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -355,4 +355,22 @@ form.sign-in-form {
         bottom: 28%;
         left: 50%;
     }
+}
+
+
+.form_signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    transition: all 0.2s 0.7s;
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.form_signup.sign-up-form {
+    opacity: 0;
+    z-index: 1;
 }

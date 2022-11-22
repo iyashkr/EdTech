@@ -18,18 +18,18 @@
                 alt="EdTech logo" style="height: 100px;" />
         </div>
         <div class="forms-container">
-            <div class="signin-signup">
-                <form class="sign-in-form">
+            <div class="signin-signup form">
+                <div class="sign-in-form">
                     <h2 class="title">Log in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input id="email" type="text" placeholder="Username" />
+                        <input id="username" type="text" placeholder="Username" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input id="password" type="password" placeholder="Password" />
+                        <input id="pass" type="password" placeholder="Password" />
                     </div>
-                    <button id="submit" value="Login" class="btn solid">Submit</button>
+                    <button id="submit" value="Login" class="btn solid" onclick="verify();">Submit</button>
                     <p class="social-text">Or Sign in with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -45,10 +45,28 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
+        <script>
+            function verify() {
 
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("pass").value;
+                // alert("email format correct")
+                if (username.length >= 5) {
+                    if (password.length >= 8) {
+                        window.location.href = "/"
+                    }
+                    else {
+                        alert("password must be minimum of 8 characters")
+                    }
+                }
+                else {
+                    alert("Username must be minimum of 5 characters")
+                }
+            }
+        </script>
         <script src="/JS/sigin.js"></script>
 </body>
 
